@@ -1,0 +1,27 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Criar Conta
+{% endblock %}
+
+{% block formulario %}
+<form method = 'POST'>
+{{form.csrf_token}}
+
+{{form.email.label()}}
+{{form.email()}}
+
+{{form.nome_usuario.label()}}
+{{form.nome_usuario()}}
+
+{{form.senha.label()}}
+{{form.senha()}}
+
+{{form.confirmacao_senha.label()}}
+{{form.confirmacao_senha()}}
+
+{{form.botao_confirmacao()}}
+</form>
+
+<a href="{{url_for('homepage')}}">Já tem uma conta? Clique aqui para fazer o login.</a>
+{% endblock %}

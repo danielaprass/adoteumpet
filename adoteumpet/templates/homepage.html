@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block titulo %}
+        Adote um Pet
+        {% endblock %}
+    </title>
+
+</head>
+{% block body %}
+<body>
+    <h1>Adote um Pet</h1>
+
+    {% block formulario %}
+    <form method = 'POST'>
+    {{form.csrf_token}}
+    
+    {{form.email.label()}}
+    {{form.email()}}
+    
+
+    {{form.senha.label()}}
+    {{form.senha()}}
+
+    {{form.botao_confirmacao()}}
+    </form>
+
+    <a href="{{url_for('criarconta')}}">Ainda não tem uma conta? Clique aqui para criar.</a>
+    {% endblock %}
+
+</body>
+{% endblock %}
+</html>
