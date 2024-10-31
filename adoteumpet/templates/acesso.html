@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css/estilo.css">
+</head>
+
+
+<body>
+
+    <div class="container-acesso">
+
+        <img class="container-img-background" src="../static/fotos_site/background.jpg">
+
+        <div class="conteudo primeiro-conteudo">
+
+            <div class="primeira-coluna">
+                <h2 class="titulo cor-clara">Já possui uma conta?</h2>
+                <p class="descricao cor-clara">Clique para entrar</p>
+                <button class="botao_transparente">Entrar</button>
+            </div>
+
+            <div class="segunda-coluna">
+                <h2 class="titulo cor-escura">Criar Conta</h2>
+                <p class="descricao cor-escura">Insira as suas informações para criar uma conta</p>
+                
+                <form id="formulario-criarconta" class="formulario" method = 'POST' enctype="multipart/form-data">
+                    {{form_criarconta.csrf_token}}
+            
+                    {{form_criarconta.nome.label(class_="input-label")}}
+                    <div class="container-input">
+                        <img class="container-icones" src="{{ url_for('static', filename='fotos_site/icone-nome.png') }}" class="input-icon" alt="Ícone de nome">
+                        {{form_criarconta.nome(class_="input-campo")}}
+                    </div>
+
+                    {{form_criarconta.email.label(class_="input-label")}}
+                    <div class="container-input">
+                        <img class="container-icones" src="{{ url_for('static', filename='fotos_site/icone-email.png') }}" class="input-icon" alt="Ícone de email">
+                        {{form_criarconta.email(class_="input-campo")}}
+                    </div>
+
+                    {{form_criarconta.senha.label(class_="input-label")}}
+                    <div class="container-input">
+                        <img style="width: 25px; height: 25px;" class="container-icones" src="{{ url_for('static', filename='fotos_site/icone-senha.png') }}" class="input-icon" alt="Ícone de senha">
+                        {{form_criarconta.senha(class_="input-campo")}}
+                    </div>
+                    
+                    {{ form_criarconta.botao_confirmacao(class_="botao-primario") }}
+
+                </form>
+            </div>
+
+        </div>
+
+        <div class="conteudo segundo-conteudo">
+
+            <div class="primeira-coluna">
+                <h2 class="titulo cor-escura">Olá,</h2>
+                <p class="descricao cor-escura">Insira as suas informações para entrar</p>
+                <p>Form</p>
+                <button class="botao">Entrar</button>
+            </div>
+
+            <div class="segunda-coluna">
+                <h2 class="titulo cor-clara">Ainda não possui uma uma conta?</h2>
+                <p class="descricao cor-clara">Clique para criar</p>
+                <button class="botao_transparente">Criar Conta</button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>

@@ -9,13 +9,20 @@ Perfil - {{usuario.nome_usuario}}
 
     {% include "navbar.html" %}
 
-    <h1>Perfil {{usuario.nome_usuario}}</h1>
+    <h1>Perfil {{usuario.nome}}</h1>
 
     <img src = "{{url_for('static', filename = 'fotos_usuarios/{}'.format(usuario.foto))}}">
 
     {% if form %}
     <form method = "POST" enctype="multipart/form-data">
         {{form.csrf_token}}
+        {{form.nome()}}
+        {{form.especie()}}
+        {{form.raca()}}
+        {{form.idade()}}
+        {{form.sexo()}}
+        {{form.peso()}}
+        {{form.descricao()}}
         {{form.foto_pet()}}
         {{form.botao_confirmacao()}}
     </form>

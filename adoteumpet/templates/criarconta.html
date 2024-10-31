@@ -4,24 +4,61 @@
 Criar Conta
 {% endblock %}
 
-{% block formulario %}
-<form method = 'POST'>
-{{form.csrf_token}}
 
-{{form.email.label()}}
-{{form.email()}}
+{% block body %}
+<body>
+    
+    <div class="container-acesso">
 
-{{form.nome_usuario.label()}}
-{{form.nome_usuario()}}
+        <img class="container-img-background" src = "{{url_for('static', filename = 'fotos_site/background.jpg')}}">
 
-{{form.senha.label()}}
-{{form.senha()}}
+        <div class="conteudo">
 
-{{form.confirmacao_senha.label()}}
-{{form.confirmacao_senha()}}
+            <div class="primeira-coluna">
+                <h2 class="titulo cor-clara">Já possui uma conta?</h2>
+                <p class="descricao cor-clara">Clique para entrar</p>
+                <a class="botao_transparente" href="{{url_for('login')}}">Entrar</a>
+            </div>
 
-{{form.botao_confirmacao()}}
-</form>
+            <div class="segunda-coluna">
+                <h2 class="titulo cor-escura">Criar Conta</h2>
+                <p class="descricao cor-escura">Insira as suas informações para criar uma conta</p>
 
-<a href="{{url_for('homepage')}}">Já tem uma conta? Clique aqui para fazer o login.</a>
+                <form class="formulario" method = 'POST' enctype="multipart/form-data">
+                    {{form.csrf_token}}
+                    
+                    {{form.nome.label(class_="input-label")}}
+                    {{form.nome(class_="input-campo")}}
+    
+                    {{form.email.label(class_="input-label")}}
+                    {{form.email(class_="input-campo")}}
+                    
+                    {{form.senha.label(class_="input-label")}}
+                    {{form.senha(class_="input-campo")}}
+                    
+                    {{form.confirmacao_senha.label(class_="input-label")}}
+                    {{form.confirmacao_senha(class_="input-campo")}}
+    
+                    {{form.foto.label(class_="input-label")}}
+                    {{form.foto()}}
+                    
+                    {{form.botao_confirmacao()}}
+                </form>
+                    
+                    
+            </div>
+
+            
+
+        </div>
+
+            
+    </div>
+
+    
+
+</body>
 {% endblock %}
+
+
+

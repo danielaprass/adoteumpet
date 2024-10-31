@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
+}
+
+
+/* BARRA DE NAVEGAÇÃO */
+
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 20%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    flex:20%;
+    margin-left:10%;
+    /* border:1px solid red; */
+    text-align: left;
+}
+
+.logo h1{
+    color:brown;
+    font-size:115%;
+}
+
+.img-logo{
+    max-width: 100%;
+}
+
+.menu{
+    flex:60%;
+    /* border:1px solid green; */
+    text-align: right;
+    padding:1%;
+    margin-right:10%;
+}
+
+.menu a{
+    color:brown;
+    text-decoration: none;
+    font-size:90%;
+    padding: 2% 1.6%;
+}
+
+.menu a:hover{
+    color:rgb(193, 94, 94);
+    border-top:4px solid brown;
+}
+
+
+.botao-primario{
+    background: brown;
+    padding: 8px 14px;
+    color: white;
+    border-radius:5px;
+    border-color: rgb(82, 13, 13);
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.botao-primario:hover{
+    border:none;
+    background-color: rgb(193, 94, 94);
+    color:white;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+.botao_transparente{
+    background: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius:5px;
+    border-color: white;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.botao_transparente:hover{
+    border:none;
+    background-color: rgb(193, 94, 94);
+    color:white;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+
+#botao-login-primario{
+    background: brown;
+    padding: 8px 14px;
+    color: white;
+    border-radius:5px;
+    border-color: rgb(82, 13, 13);
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#botao-login-primario:hover{
+    border:none;
+    background-color: rgb(193, 94, 94);
+    color:white;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#botao-logout-primario{
+    background: brown;
+    padding: 8px 14px;
+    color: white;
+    border-radius:5px;
+    border-color: rgb(82, 13, 13);
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#botao-logout-primario:hover{
+    border:none;
+    background-color: rgb(193, 94, 94);
+    color:white;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+
+/* APRESENTAÇÃO */
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height:450px;
+    background: white;
+
+}
+
+.headline{
+    margin-left:10%;
+    flex:40%;
+    /* border:1px solid black; */
+}
+
+.headline h1{
+    font-weight: 700;
+    font-size:20px;
+    color: brown;
+}
+
+.headline p{
+    color: gray;
+    text-align: left;
+
+}
+
+.botao-buscar{
+    display: inline-block;
+    background: brown;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.botao-buscar:hover{
+    border:none;
+    background-color: rgb(193, 94, 94);
+    color:white;
+}
+
+.img-headline{
+    margin-right:10%;
+    flex:40%;
+    /* border:1px solid pink; */
+    text-align: center;
+}
+
+
+/* LISTA DE PETS DISPONÍVEIS */
+
+section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-top:60px;
+    /* border:1px solid black; */
+    margin-left: 10%;
+    margin-right: 10%;
+    /* height:400px */
+}
+
+section h2{
+    width:100%;
+    font-size:20px;
+    margin:0;
+    margin-bottom: 20px;
+    color:brown;
+}
+
+.card-pet{
+    display: inline-block;
+    width:20%;
+    padding: 20px;
+    margin: 1%;
+    text-align: center;
+    border:1px solid brown;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.card-pet:hover{
+    background: brown;
+    color: white;
+    width:25%;
+}
+
+/* RODAPÉ */
+
+footer{
+    margin-top:100px;
+    height: 200px;
+    background-image:linear-gradient(180deg, brown, rgb(79, 10, 10), rgb(16, 0, 0));
+    text-align: center;
+    border-top:5px solid rgb(193, 94, 94);
+}
+
+.logo-rodape{
+    /* padding: 100px;; */
+    border: 1px solid white;
+    color: white;
+    font-size: 10px;
+}
+
+/* ACESSO: LOGIN / CRIAR CONTA */
+
+.container-acesso{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border:1px solid brown;
+    border-radius: 10px;
+    height: 100vh;
+    position: relative;
+}
+
+.container-img-background{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    justify-content: center;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.conteudo{
+    position: relative;
+    margin-top: 80px;
+    border:1px solid brown;
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.conteudo::before{
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.titulo{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.descricao{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cor-clara{
+    color: white;
+}
+
+.cor-escura{
+    color: brown;
+}
+
+
+.primeiro-conteudo{
+    text-align: center;
+}
+
+.segundo-conteudo{
+    position: absolute;
+    display: none;
+}
+
+
+.primeira-coluna{
+    text-align: center;
+    flex: 1 0 auto;
+    width: 30%;
+    margin-right: 5%;
+    z-index: 10;
+}
+
+.segunda-coluna{
+    flex: 2 0 auto;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.formulario input{
+    height: 45px;
+    border: none;
+    background-color: darksalmon;
+    margin: 8px;
+}
+
+.container-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container-input i{
+    position: absolute;
+    left: 10px;
+    color: brown;
+}
+
+.input-campo{
+    padding-left: 30px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-label{
+    font-size: 14px;
+}
+
+.container-icones{
+    width: 20px;
+    height: 20px;
+}

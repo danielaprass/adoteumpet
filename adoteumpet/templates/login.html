@@ -1,0 +1,50 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Login
+{% endblock %}
+
+
+{% block body %}
+<body>
+    
+    <div class="container-acesso">
+
+        <img class="container-img-background" src = "{{url_for('static', filename = 'fotos_site/background.jpg')}}">
+
+        <div class="conteudo">
+            <div class="primeira-coluna">
+
+                <h2 class="titulo cor-escura">Olá,</h2>
+                <p class="descricao cor-escura">Insira as suas informações para entrar</p>
+
+                <form class="formulario" method = 'POST' enctype="multipart/form-data">
+                    {{form.csrf_token}}
+        
+                    {{form.email.label(class_="input-label")}}
+                    {{form.email(class_="input-campo")}}
+        
+                    {{form.senha.label(class_="input-label")}}
+                    {{form.senha(class_="input-campo")}}
+        
+                    {{form.botao_confirmacao()}}
+                </form>
+            </div>
+
+            <div class="segunda-coluna">
+                <h2 class="titulo cor-clara">Ainda não possui uma uma conta?</h2>
+                <p class="descricao cor-clara">Clique para criar</p>
+                <a class="botao_transparente" href="{{url_for('criarconta')}}">Criar Conta</a>
+            </div>
+                
+        </div>
+
+    </div>
+
+    
+
+</body>
+{% endblock %}
+
+
+

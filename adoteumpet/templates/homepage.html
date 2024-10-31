@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma de adoção de pets">
+    <meta name="keywords" content="Adoção, Pet, Cachorro, Gato">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
     <title>
         {% block titulo %}
         Adote um Pet
@@ -10,27 +13,42 @@
     </title>
 
 </head>
+
 {% block body %}
 <body>
-    <h1>Adote um Pet</h1>
-
-    {% block formulario %}
-    <form method = 'POST'>
-    {{form.csrf_token}}
     
-    {{form.email.label()}}
-    {{form.email()}}
-    
+    {% include "navbar.html" %}
 
-    {{form.senha.label()}}
-    {{form.senha()}}
+    <header class="header">
+        <div class="headline">
+            <h1 style="font-size: 70px;">Adote um Pet</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro, ad distinctio recusandae animi, aperiam harum quas aut incidunt exercitationem natus? Minus iste labore impedit velit dignissimos ad temporibus molestias!
+            </p>
+            <a href="#" class="botao-buscar">Buscar</a>
+        </div>
+        <div class="img-headline">
+            <img style="max-width: 100%;" src="static/fotos_site/background-transparente.png">
+        </div>
+    </header>
 
-    {{form.botao_confirmacao()}}
-    </form>
+    <section>
 
-    <a href="{{url_for('criarconta')}}">Ainda não tem uma conta? Clique aqui para criar.</a>
-    {% endblock %}
+        <h2>Bichinhos a espera de um lar</h2>
+
+        {% for pet in pets %}
+
+        
+        <div class="card-pet">
+            <img style="max-width: 100%;" src="{{ url_for('static', filename='fotos_pets/{}'.format(pet.foto_pet)) }}">
+            <h3>{{pet.nome}}</h3>
+            <a href="{{ url_for('perfil_usuario', id_usuario = pet.id_usuario) }}"></a>        
+
+        {% endfor %}
+
+    </section>
 
 </body>
 {% endblock %}
+
 </html>
